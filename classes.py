@@ -1,19 +1,22 @@
 #importacao de modulos
-
+from datetime import datetime as dt
 #Classes
 class Moto:
 
-    def __init__(self, placa: str, km_atual: int, marca:str =None, tempo_troca_oleo_motor: int = None) -> None:
+    def __init__(self, placa: str, km_atual: int, marca:str =None, tempo_troca_oleo_motor: int = None, timestamp = dt.now()) -> None:
         self.placa = placa
         self.km_atual = km_atual
         self.marca = marca 
         self.tempo_troca_oleo_motor = tempo_troca_oleo_motor
+        self.timestamp = timestamp
     #método de apresentação
     def __str__(self) -> str:
         return f"{self.marca}- Veículo placa {self.placa}, Quilometragem atual: {self.km_atual} Kms, Tempo de troca de óleo do motor: {self.tempo_troca_oleo_motor}"
     #Somar tempo de troca de óleo do motor do manual com a quilometragem registrada da moto
     def ProximaTrocaMotor(self):
         return self.km_atual + self.tempo_troca_oleo_motor
+    def AtualEm(self):
+        return str(self.timestamp.date())
 class Harley(Moto):
     #herda as funções da classe pai
     def __init__(self, placa: str, km_atual: int, marca: str = "Harley Davidson", tempo_troca_oleo_motor: int = None, ultima_troca_oleo_primaria: int = None, ultima_troca_oleo_embreagem: int = None) -> None:
@@ -48,4 +51,4 @@ print(m4)
 m2.ProximaTrocaMotor()
 
 
-
+m2.AtualEm()
