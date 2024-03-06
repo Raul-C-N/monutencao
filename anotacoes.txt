@@ -1,0 +1,11 @@
+Classe Moto()
+    1.placa
+    2.km atual
+    3.marca
+    4.intervalo em km de troca de óleo do motor
+    5.intervalo em meses da troca de óleo do motor
+    6.data da atualização
+        7.(Harley) intervalo em km de troca de óleo da primária
+        8.(Harley) intervalo em meses da troca de óleo da primária
+        9.(Harley) intervalo em km de troca de óleo da embreagem
+        10.(Harley) intervalo em meses da troca de óleo da embreagem
